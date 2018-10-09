@@ -6,5 +6,9 @@ public class Grupo {
 	public Grupo(String nome) {
 		this.nome = nome;
 	}
+	
+	public void adicionaAluno(String matricula) {
+		 
+	}
 
 }

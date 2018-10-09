@@ -7,12 +7,13 @@ import java.util.HashSet;
 public class Sistema {
 	private ArrayList<Aluno> aluno;
 	private HashMap<String, Aluno> mapaMatricula;
-	private HashSet<Grupo> grupo;
+	private HashMap<String, Grupo> grupo;
+	
 
 	public Sistema() {
 		this.aluno = new ArrayList<>();
 		this.mapaMatricula = new HashMap<>();
-		this.grupo = new HashSet<>();
+		this.grupo = new HashMap<>();
 	}
 
 	public String cadastraAluno(String matricula, String nome, String curso) {
@@ -20,8 +21,9 @@ public class Sistema {
 			Aluno novoAluno = new Aluno(matricula, nome, curso);
 			this.aluno.add(novoAluno);
 			this.mapaMatricula.put(matricula, novoAluno);
+			return Saida.cadastrado();
 		}
-		return "MATRÍCULA JÁ CADASTRADA!";
+		return Saida.existeMatricula();
 	}
 
 	private boolean existeAluno(String matricula) {
@@ -32,20 +34,30 @@ public class Sistema {
 		if(existeAluno(matricula)) {
 			return this.mapaMatricula.get(matricula).toString();
 		}
-		return "ALUNO NÃO CADASTRADO.";
+		return Saida.alunoIvld();
 	}
 
 	public String cadastraGrupo(String grupo) {
 		if(!existeGrupo(grupo)) {
 			Grupo novoGrupo = new Grupo(grupo);
-			this.grupo.add(novoGrupo);
-			return "CADASTRO REALIZADO!";
+			this.grupo.put(grupo, novoGrupo);
+			return Saida.cadastrado();
 		}
-		return "GRUPO JÁ CADASTRADO!";
+		return Saida.existeGrupo();
 	}
 
 	private boolean existeGrupo(String novoGrupo) {
-		return this.grupo.contains(novoGrupo);
+		return this.grupo.containsKey(novoGrupo);
+	}
+
+	public String alocarAluno(String matricula, String novoGrupo) {
+		if(existeAluno(matricula)) {
+			if(existeGrupo(novoGrupo)) {
+				
+			}
+			return Saida.grupoNCadastrado();
+		}
+		return Saida.alunoNCadastrado();
 	}
 
 }
