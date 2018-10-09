@@ -11,7 +11,7 @@ public class Aluno {
 			throw new NullPointerException("IMPOSSÍVEL CADASTRAR MATRÍCULA NULA!");
 		}
 		if(matricula.trim().equals("")) {
-			throw new IllegalArgumentException("IMPOSSÍVEL CADASTRAR MATRCÍCULA VAZIA!");
+			throw new IllegalArgumentException("IMPOSSÍVEL CADASTRAR MATRÍCULA VAZIA!");
 		}
 		if(nome == null) {
 			throw new NullPointerException("IMPOSSÍVEL CADASTRAR NOME NULO!");
@@ -25,6 +25,15 @@ public class Aluno {
 		if(curso.trim().equals("")) {
 			throw new IllegalArgumentException("IMPOSSÍVEL CADASTRAR CURSO VAZIO!");
 		}
+		
+		this.matricula = matricula;
+		this.nome = nome;
+		this.curso = curso;
+	}
+	
+	@Override
+	public String toString() {
+		return "Aluno " + this.matricula + " - " + this.nome + " - " + this.curso;
 	}
 
 }

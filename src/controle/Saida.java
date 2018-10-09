@@ -28,5 +28,9 @@ public class Saida {
 	public String curso() {
 		return "Curso: ";
 	}
+	
+	public String grupo() {
+		return "Grupo: ";
+	}
 
 }

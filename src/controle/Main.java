@@ -12,7 +12,7 @@ public class Main {
 
 		do {
 			System.out.print(saida.menu());
-			entrada = scanner.nextLine().toLowerCase();
+			entrada = scanner.nextLine().toLowerCase().trim();
 
 			switch (entrada) 
 			{
@@ -20,8 +20,14 @@ public class Main {
 					validarCadastro(scanner, saida, controller);
 					break;
 				case "e":
+					System.out.print(saida.matricula());
+					entrada = scanner.nextLine();
+					System.out.println(controller.getAluno(entrada) + System.lineSeparator());
 					break;
 				case "n":
+					System.out.print(saida.grupo());
+					entrada = scanner.nextLine().toUpperCase();
+					System.out.println(controller.cadastraGrupo(entrada) + System.lineSeparator());
 					break;
 				case "a":
 					break;
@@ -48,10 +54,10 @@ public class Main {
 			System.out.print(saida.curso());
 			String curso = scanner.nextLine();
 			
-			System.out.println(controller.cadastraAluno(matricula, nome, curso));
+			System.out.println(controller.cadastraAluno(matricula, nome, curso) + System.lineSeparator());
 			
 		}catch(Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage() + System.lineSeparator());
 		}
 	}
 
