@@ -1,13 +1,13 @@
-package controle;
+package ferramentas;
 
 public class Saida {
+	
+	public final static String PL = System.lineSeparator();
 
 	public static String menu() {
-		return "(C)adastrar Aluno" + System.lineSeparator() + "(E)xibir Aluno" + System.lineSeparator() + "(N)ovo Grupo"
-				+ System.lineSeparator() + "(A)locar Aluno no Grupo e Imprimir Grupos" + System.lineSeparator()
-				+ "(R)egistrar Aluno que Respondeu" + System.lineSeparator() + "(I)mprimir Alunos que Responderam"
-				+ System.lineSeparator() + "(O)ra, vamos fechar o programa!" + System.lineSeparator()
-				+ System.lineSeparator() + "Opção> ";
+		return "(C)adastrar Aluno" + PL + "(E)xibir Aluno" + PL + "(N)ovo Grupo" + PL
+				+ "(A)locar Aluno no Grupo e Imprimir Grupos" + PL + "(R)egistrar Aluno que Respondeu" + PL
+				+ "(I)mprimir Alunos que Responderam" + PL + "(O)ra, vamos fechar o programa!" + PL + PL + "Opção> ";
 	}
 
 	public static String invalido() {
@@ -49,13 +49,45 @@ public class Saida {
 	public static String opcaoGrupo() {
 		return "(A)locar Aluno ou (I)mprimir Grupo? ";
 	}
-	
+
 	public static String alunoNCadastrado() {
 		return "Aluno não cadastrado.";
 	}
-	
+
 	public static String grupoNCadastrado() {
 		return "Grupo não cadastrado.";
+	}
+	
+	public static String alocado() {
+		return "Aluno alocado!";
+	}
+	
+	public static String alunoRegistrado() {
+		return "Aluno registrado!";
+	}
+	
+	public static String matriculaNula() {
+		return "Matricula Nula";
+	}
+	
+	public static String matriculaVazia() {
+		return "Matricula Vazia";
+	}
+	
+	public static String nomeNulo() {
+		return "Nome Nulo";
+	}
+	
+	public static String nomeVazio() {
+		return "Nome Vazio";
+	}
+
+	public static String cursoNulo() {
+		return "Curso Nulo";
+	}
+
+	public static String cursoVazio() {
+		return "Curso Vazio";
 	}
 
 }
