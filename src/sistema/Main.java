@@ -40,7 +40,7 @@ public class Main {
 			case "r":
 				System.out.print(Saida.matricula());
 				String matricula = scanner.nextLine();
-				System.out.println(controller.registraResposta(matricula).toUpperCase() + Saida.PL);
+				System.out.println(controller.registraResposta(matricula) + Saida.PL);
 				break;
 			case "i":
 				System.out.println(controller.listarRespostas() + Saida.PL);
@@ -64,7 +64,7 @@ public class Main {
 			String matricula = scanner.nextLine();
 			System.out.print(Saida.grupo());
 			String grupo = scanner.nextLine();
-			System.out.println(controller.alocarAluno(matricula, grupo).toUpperCase() + Saida.PL);
+			System.out.println(controller.alocarAluno(matricula, grupo) + Saida.PL);
 			break;
 		case "i":
 			System.out.print(Saida.grupo());
