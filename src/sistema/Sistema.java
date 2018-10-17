@@ -32,6 +32,7 @@ public class Sistema {
 	}
 
 	public String getAluno(String matricula) {
+		Validar.validarMatricula(matricula);
 		if(existeAluno(matricula)) {
 			return "Aluno: " + this.mapaMatricula.get(matricula).toString();
 		}
@@ -39,6 +40,7 @@ public class Sistema {
 	}
 
 	public String cadastraGrupo(String grupo) {
+		grupo = grupo.toUpperCase();		
 		if(!existeGrupo(grupo)) {
 			Grupo novoGrupo = new Grupo(grupo);
 			this.grupo.put(grupo, novoGrupo);
@@ -48,8 +50,8 @@ public class Sistema {
 	}
 
 	public String alocarAluno(String matricula, String novoGrupo) {
-		Validar.validarEntrada(matricula);
-		Validar.validarEntrada(novoGrupo);
+		Validar.validarMatricula(matricula);
+		Validar.validarGrupo(novoGrupo);
 		if(existeAluno(matricula)) {
 			if(existeGrupo(novoGrupo)) {
 				this.grupo.get(novoGrupo.toUpperCase()).adicionaAluno(this.mapaMatricula.get(matricula));
@@ -61,6 +63,7 @@ public class Sistema {
 	}
 
 	public String listarAlunos(String novoGrupo) {
+		Validar.validarGrupo(novoGrupo);
 		if(existeGrupo(novoGrupo)) {
 			return this.grupo.get(novoGrupo.toUpperCase()).toString();
 		}

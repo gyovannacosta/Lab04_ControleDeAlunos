@@ -51,19 +51,19 @@ public class Saida {
 	}
 
 	public static String alunoNCadastrado() {
-		return "Aluno não cadastrado.";
+		return "ALUNO NÃO CADASTRADO!";
 	}
 
 	public static String grupoNCadastrado() {
-		return "Grupo não cadastrado.";
+		return "GRUPO NÃO CADASTRADO!";
 	}
 	
 	public static String alocado() {
-		return "Aluno alocado!";
+		return "ALUNO ALOCADO!";
 	}
 	
 	public static String alunoRegistrado() {
-		return "Aluno registrado!";
+		return "ALUNO REGISTRADO!";
 	}
 	
 	public static String matriculaNula() {

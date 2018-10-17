@@ -31,7 +31,7 @@ public class Main {
 				break;
 			case "n":
 				System.out.print(Saida.grupo());
-				entrada = scanner.nextLine().toUpperCase();
+				entrada = scanner.nextLine();
 				System.out.println(controller.cadastraGrupo(entrada) + Saida.PL);
 				break;
 			case "a":
