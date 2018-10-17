@@ -27,12 +27,12 @@ public class Main {
 			case "e":
 				System.out.print(Saida.matricula());
 				entrada = scanner.nextLine();
-				System.out.println(controller.getAluno(entrada) + System.lineSeparator());
+				System.out.println(controller.getAluno(entrada) + Saida.PL);
 				break;
 			case "n":
 				System.out.print(Saida.grupo());
 				entrada = scanner.nextLine().toUpperCase();
-				System.out.println(controller.cadastraGrupo(entrada) + System.lineSeparator());
+				System.out.println(controller.cadastraGrupo(entrada) + Saida.PL);
 				break;
 			case "a":
 				validarAlocar();
@@ -40,15 +40,15 @@ public class Main {
 			case "r":
 				System.out.print(Saida.matricula());
 				String matricula = scanner.nextLine();
-				System.out.println(controller.registraResposta(matricula));
+				System.out.println(controller.registraResposta(matricula).toUpperCase() + Saida.PL);
 				break;
 			case "i":
-				System.out.println(controller.listarRespostas());
+				System.out.println(controller.listarRespostas() + Saida.PL);
 				break;
 			case "o":
 				break;
 			default:
-				System.out.println(Saida.invalido());
+				System.out.println(Saida.invalido() + Saida.PL);
 			}
 
 		} while (!entrada.trim().equals("o"));
@@ -69,7 +69,7 @@ public class Main {
 		case "i":
 			System.out.print(Saida.grupo());
 			String novoGrupo = scanner.nextLine();
-			System.out.println(controller.listarAlunos(novoGrupo));
+			System.out.println(controller.listarAlunos(novoGrupo) + Saida.PL);
 
 			break;
 		default:

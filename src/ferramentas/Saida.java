@@ -67,7 +67,7 @@ public class Saida {
 	}
 	
 	public static String matriculaNula() {
-		return "Matricula Nula";
+		return "Impossível cadastrar Matricula Nula";
 	}
 	
 	public static String matriculaVazia() {
@@ -88,6 +88,14 @@ public class Saida {
 
 	public static String cursoVazio() {
 		return "Curso Vazio";
+	}
+	
+	public static String grupoNulo() {
+		return "Grupo Nulo";
+	}
+	
+	public static String grupoVazio() {
+		return "Grupo Vazio";
 	}
 
 }

@@ -3,12 +3,14 @@ package sistema;
 import java.util.HashSet;
 
 import ferramentas.Saida;
+import ferramentas.Validar;
 
 public class Grupo {
 	private String nome;
 	private HashSet<Aluno> alunos;
 
 	public Grupo(String nome) {
+		Validar.validarGrupo(nome);
 		this.nome = nome;
 		this.alunos = new HashSet<>();
 	}
@@ -27,7 +29,7 @@ public class Grupo {
 		for (Aluno aluno : alunos) {
 			listar += "* " + aluno.toString() + Saida.PL;
 		}
-		return listar;
+		return listar.trim();
 	}
 
 	@Override

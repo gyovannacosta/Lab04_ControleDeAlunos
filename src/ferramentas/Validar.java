@@ -41,5 +41,16 @@ public class Validar {
 			throw new IllegalArgumentException(Saida.cursoVazio());
 		}
 	}
+
+	public static void validarGrupo(String nome) {
+		if(nome == null) {
+			throw new NullPointerException(Saida.grupoNulo());
+		}
+		
+		if(nome.trim().equals("")) {
+			throw new IllegalArgumentException(Saida.grupoVazio());
+		}
+		
+	}
 	
 }

@@ -81,7 +81,7 @@ public class Sistema {
 		for (String resposta : respondeu) {
 			listar += this.mapaMatricula.get(resposta).toString() + Saida.PL;
 		}
-		return listar;
+		return listar.trim();
 	}
 	
 	private boolean existeAluno(String matricula) {
