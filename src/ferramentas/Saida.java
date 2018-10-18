@@ -1,7 +1,14 @@
 package ferramentas;
 
+/**
+ * A classe Saida tem como objetivo auxiliar as classes restantes do sistema
+ * fornecendo as saídas de impressão para o usuário.
+ * 
+ * @author Deborah Gyovanna.
+ *
+ */
 public class Saida {
-	
+
 	public final static String PL = System.lineSeparator();
 
 	public static String menu() {
@@ -11,11 +18,11 @@ public class Saida {
 	}
 
 	public static String invalido() {
-		return "Opção inválida!";
+		return "OPÇÃO INVÁLIDA!";
 	}
 
 	public static String matricula() {
-		return "Matŕicula: ";
+		return "Matrícula: ";
 	}
 
 	public static String nome() {
@@ -57,45 +64,45 @@ public class Saida {
 	public static String grupoNCadastrado() {
 		return "GRUPO NÃO CADASTRADO!";
 	}
-	
+
 	public static String alocado() {
 		return "ALUNO ALOCADO!";
 	}
-	
+
 	public static String alunoRegistrado() {
 		return "ALUNO REGISTRADO!";
 	}
-	
+
 	public static String matriculaNula() {
-		return "Impossível cadastrar Matricula Nula";
+		return "MATRÍCULA NULA!";
 	}
-	
+
 	public static String matriculaVazia() {
-		return "Matricula Vazia";
+		return "mATRÍCULA VAZIA!";
 	}
-	
+
 	public static String nomeNulo() {
-		return "Nome Nulo";
+		return "NOME NULO!";
 	}
-	
+
 	public static String nomeVazio() {
-		return "Nome Vazio";
+		return "NOME VAZIO!";
 	}
 
 	public static String cursoNulo() {
-		return "Curso Nulo";
+		return "CURSO NULO!";
 	}
 
 	public static String cursoVazio() {
-		return "Curso Vazio";
+		return "CURSO VAZIO!";
 	}
-	
+
 	public static String grupoNulo() {
-		return "Grupo Nulo";
+		return "GRUPO NULO!";
 	}
-	
+
 	public static String grupoVazio() {
-		return "Grupo Vazio";
+		return "GEUPO VAZIO";
 	}
 
 }
